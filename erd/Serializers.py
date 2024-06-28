@@ -135,4 +135,4 @@ class DOSerializers(serializers.ModelSerializer):
 class ReminderSerializer(serializers.ModelSerializer):
     class Meta:
         model= Reminder
-        fields =['ReminderID', 'patientID', 'StartDate', 'EndDate', 'State', 'AlarmRecordes', 'Audio', 'Notes', 'PillCount', 'Checked']
+        fields =['ReminderID', 'patientID', 'StartDate', 'EndDate', 'AlarmRecordes', 'Audio', 'Notes', 'Checked']
