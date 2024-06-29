@@ -109,7 +109,7 @@ class patient(models.Model):
 from django.db import models
 
 class Medicine(models.Model):
-    # DrugID = models.AutoField(primary_key=True)
+    DrugID = models.IntegerField(max_length=50,null=True, blank=True)
     DrugName = models.CharField(primary_key=True,null=False, blank=True, max_length=50)
     purpose_of_use = models.CharField(max_length=50)
     Description = models.CharField(max_length=100)
@@ -129,7 +129,7 @@ class Medicine(models.Model):
 class Reminder(models.Model):
     ReminderID = models.AutoField(primary_key=True)
     patientID = models.ForeignKey('patient', on_delete=models.CASCADE)
-    DrugName = models.ForeignKey(Medicine, on_delete=models.CASCADE, related_name='reminders_as_drugname')
+    DrugName = models.ForeignKey(Medicine, on_delete=models.CASCADE)
     StartDate = models.DateTimeField()
     EndDate = models.DateTimeField()
     State = models.BooleanField(default=False)
