@@ -29,8 +29,8 @@ from django.dispatch import receiver
 
 
 class Login(models.Model):
-    username=models.CharField(primary_key=True,max_length=100,blank=False)
-    Password=models.CharField(max_length=100,blank=False)
+    username=models.CharField(primary_key=True,max_length=100,blank=False,null=False)
+    Password=models.CharField(max_length=100,blank=False,null=False)
     def __str__(self):
         return self.username
     class Meta:
