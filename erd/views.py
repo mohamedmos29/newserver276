@@ -1,4 +1,4 @@
-from .Serializers import pSerializers,ESerializers,ReminderSerializer,DOSerializers,DSerializers,MSerializers,RegisterSerializers,UserSerializer,LoginSerializer
+from .Serializers import pSerializers,ESerializers,ReminderSerializer,DOSerializers,DSerializers,MSerializers,RegisterSerializers,LoginSerializer
 from rest_framework import viewsets
 from .models import patient,Escort,Medicine,Diseases,Document,Reminder,Register,Login
 # from drf_yasg.utils import swagger_auto_schema
