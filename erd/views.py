@@ -5,8 +5,8 @@ from .models import patient,Escort,Medicine,Diseases,Document,Reminder,Register,
 # from rest_framework.response import Response
 
 
-class LoginSerializer(viewsets.ModelViewSet):
-    queryset = Login.objects.all()
+class getLogin(viewsets.ModelViewSet):
+    queryset =  Login.objects.all()
     serializer_class = LoginSerializer
 
 
