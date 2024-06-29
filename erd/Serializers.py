@@ -6,8 +6,7 @@ from .models import patient,Escort,Medicine,Diseases,Document,Reminder,Register,
 
 class LoginSerializer(serializers.ModelSerializer):
     password=serializers.CharField(write_only=True,required=False)
-    username= serializers.CharField(read_only=True)
-
+    # username= serializers.CharField(read_only=True)
 
     class Meta:
         model=Login
