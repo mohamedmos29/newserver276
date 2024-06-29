@@ -7,34 +7,34 @@ from django.utils.deconstruct import deconstructible
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
-@deconstructible
-class GenerateProfileImagePath(object):
-    def __init__(self):
-        pass
-    def __call__(self,instance,filename):
-        ext=filename.split('.')[-1]
-        path =f'media/accounts/{instance.user.id}/images/'
-        name=f'profile_image.{ext}'
-        return os.path.join(path,name)
+# @deconstructible
+# class GenerateProfileImagePath(object):
+#     def __init__(self):
+#         pass
+#     def __call__(self,instance,filename):
+#         ext=filename.split('.')[-1]
+#         path =f'media/accounts/{instance.user.id}/images/'
+#         name=f'profile_image.{ext}'
+#         return os.path.join(path,name)
     
-user_profile_image_path=GenerateProfileImagePath()
+# user_profile_image_path=GenerateProfileImagePath()
 
 
-class Profile(models.Model):
-    username=models.OneToOneField(User,on_delete=models.CASCADE)
-    image=models.FileField(upload_to=user_profile_image_path,blank=True,null=True)
-    def __str__(self):
-        return f'{self.user.username}\'s Profile'
-
-
-
-# class Login(models.Model):
-#     Userhandel=models.CharField(primary_key=True,max_length=100,blank=False)
-#     Password=models.CharField(max_length=100,blank=False)
+# class Profile(models.Model):
+#     username=models.OneToOneField(User,on_delete=models.CASCADE)
+#     image=models.FileField(upload_to=user_profile_image_path,blank=True,null=True)
 #     def __str__(self):
-#         return self.Userhandel
-#     class Meta:
-#         ordering=['Userhandel']
+#         return f'{self.user.username}\'s Profile'
+
+
+
+class Login(models.Model):
+    Userhandel=models.CharField(primary_key=True,max_length=100,blank=False)
+    Password=models.CharField(max_length=100,blank=False)
+    def __str__(self):
+        return self.Userhandel
+    class Meta:
+        ordering=['Userhandel']
 
     
 class Register(models.Model):
