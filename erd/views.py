@@ -5,14 +5,14 @@ from .models import patient,Escort,Medicine,Diseases,Document,Reminder,Register,
 # from rest_framework.response import Response
 
 
-# class UserSerializer(viewsets.ModelViewSet):
-#     queryset = Profile.objects.all()
-#     serializer_class = UserSerializer
-
-
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
+class UserSerializer(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
     serializer_class = UserSerializer
+
+
+# class UserViewSet(viewsets.ModelViewSet):
+#     queryset = User.objects.all()
+#     serializer_class = UserSerializer
 
 
 
