@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.validators import MinValueValidator,MaxValueValidator
 from datetime import datetime
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 import os 
 from django.utils.deconstruct import deconstructible
 from django.db.models.signals import pre_save
@@ -29,12 +29,12 @@ from django.dispatch import receiver
 
 
 class Login(models.Model):
-    Userhandel=models.CharField(primary_key=True,max_length=100,blank=False)
+    username=models.CharField(primary_key=True,max_length=100,blank=False)
     Password=models.CharField(max_length=100,blank=False)
     def __str__(self):
-        return self.Userhandel
+        return self.username
     class Meta:
-        ordering=['Userhandel']
+        ordering=['username']
 
     
 class Register(models.Model):
