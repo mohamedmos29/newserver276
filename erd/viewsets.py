@@ -1,5 +1,5 @@
 # from django.contrib.auth.models import User
-from .Serializers import UserSerializer
+# from .Serializers import UserSerializer
 from rest_framework import viewsets
 # from .models import Profile
 from .permissions import IsUserOwnerOrGetAndPostOnly
