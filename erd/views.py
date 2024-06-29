@@ -1,13 +1,13 @@
-from .Serializers import pSerializers,ESerializers,ReminderSerializer,DOSerializers,DSerializers,MSerializers,RegisterSerializers,UserSerializer
+from .Serializers import pSerializers,ESerializers,ReminderSerializer,DOSerializers,DSerializers,MSerializers,RegisterSerializers,UserSerializer,LoginSerializer
 from rest_framework import viewsets
-from .models import patient,Escort,Medicine,Diseases,Document,Reminder,Register,Profile
+from .models import patient,Escort,Medicine,Diseases,Document,Reminder,Register,Login
 # from drf_yasg.utils import swagger_auto_schema
 # from rest_framework.response import Response
 
 
-class UserSerializer(viewsets.ModelViewSet):
-    queryset = Profile.objects.all()
-    serializer_class = UserSerializer
+class LoginSerializer(viewsets.ModelViewSet):
+    queryset = Login.objects.all()
+    serializer_class = LoginSerializer
 
 
 # class UserViewSet(viewsets.ModelViewSet):
