@@ -7,17 +7,17 @@ from django.utils.deconstruct import deconstructible
 from django.db.models.signals import pre_save
 from django.dispatch import receiver
 
-# @deconstructible
-# class GenerateProfileImagePath(object):
-#     def __init__(self):
-#         pass
-#     def __call__(self,instance,filename):
-#         ext=filename.split('.')[-1]
-#         path =f'media/accounts/{instance.user.id}/images/'
-#         name=f'profile_image.{ext}'
-#         return os.path.join(path,name)
+@deconstructible
+class GenerateProfileImagePath(object):
+    def __init__(self):
+        pass
+    def __call__(self,instance,filename):
+        ext=filename.split('.')[-1]
+        path =f'media/accounts/{instance.user.id}/images/'
+        name=f'profile_image.{ext}'
+        return os.path.join(path,name)
     
-# user_profile_image_path=GenerateProfileImagePath()
+user_profile_image_path=GenerateProfileImagePath()
 
 
 # class Profile(models.Model):
