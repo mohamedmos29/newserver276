@@ -59,7 +59,7 @@ class Escort(models.Model):
     Password=models.CharField(max_length=100,blank=False)
     PhoneNumber=models.CharField(null=False,blank=False,max_length=14)
     yourHandel=models.CharField(max_length=100,blank=False)
-    ProfilePicture=models.ImageField(upload_to='photos%y%m%d')
+    # ProfilePicture=models.ImageField(upload_to='photos%y%m%d')
     Male=models.BooleanField(default=True)
     Female=models.BooleanField(default=False)
     LastModified=models.DateTimeField(auto_now=True,null=False,blank=False)
@@ -92,7 +92,7 @@ class patient(models.Model):
     Password = models.CharField(max_length=100, blank=False)
     PhoneNumber = models.CharField(null=False, blank=False, max_length=100)
     Handel = models.CharField(max_length=100)
-    ProfilePicture = models.ImageField(upload_to='photos%y%m%d')
+    # ProfilePicture = models.ImageField(upload_to='photos%y%m%d')
     Male = models.BooleanField(default=True)
     Female = models.BooleanField(default=False)
 
